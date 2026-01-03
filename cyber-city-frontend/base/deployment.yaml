@@ -21,6 +21,9 @@ spec:
           image: registry.cyber-safekids.com/safecommu/cyber-city-frontend
           ports:
             - containerPort: 3000
+          envFrom:
+            - secretRef:
+                name: cyber-city-frontend-env
           resources:
             limits:
               cpu: "1"
